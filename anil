@@ -1,0 +1,11 @@
+securecrt ile sessionmanager kısmından vplwebsrv02'ye baglanıcaksın
+sudo su - ile root'a login olucaksın NGss1234!
+cd docker/dockerbuild/macellanfe/htdocs
+htdocs icinde 'rm -rf *' temizle
+htdocs icine wget ngss.io/vdftopo41.zip ile indiriyoruz
+sonra unzip komutu ile cıkarıyoruz
+mv vdftopo41/* .
+docker images komutu ile son olusturulan versiyonu kontrol edebilirsin
+htdocs'tan macellanfe klasorune donup 'docker build -f Dockerfile -t macellanfrontend:1.2.5 .' komutunu sondaki v ersiyonu arttırarak calıstır
+cd docker/traefik/template klasorune gidip 'vi docker-compose.yaml' komutunu calıstırp dosyayı acıp versityonu degistirecegimiz satıra gelip shift a ile editlenebilir duruma getirip versiyonu degistir esc'e basıp :wq yazarak cık
+aynı klasorde docker-compose up -d projeyi tekrar ayaga kaldırıyor.
